@@ -11,7 +11,21 @@ const routes: RouteRecordRaw[] = [
     component: () => import('layouts/EmptyLayout.vue'),
     children: [{ path: '/menu', component: () => import('pages/Menu.vue') }],
   },
-
+  {
+    path: '/firma',
+    component: () => import('pages/admin/Firma.vue'),
+    children: [{ path: '/firma', component: () => import('pages/admin/Firma.vue') }],
+  },
+  {
+    path: '/index',
+    component: () => import('pages/admin/Index.vue'),
+    children: [{ path: '/firma', component: () => import('pages/admin/Index.vue') }],
+  },
+  {
+    path: '/login',
+    component: () => import('pages/admin/Login.vue'),
+    children: [{ path: '/firma', component: () => import('pages/admin/Login.vue') }],
+  },
   // Always leave this as last one,
   // but you can also remove it
   {
